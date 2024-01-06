@@ -9,6 +9,7 @@ function Account() {
   const { user, setUser } = useContext(ProductContext);
   const navigate = useNavigate();
 
+  //OAuth login with firebase
   const handleLogin = () => {
     const auth = getAuth();
     signInWithPopup(auth, provider)
@@ -16,6 +17,7 @@ function Account() {
       .catch((err) => console.log(err));
   };
 
+  //Logout
   const handleLogout = () => {
     const auth = getAuth();
 

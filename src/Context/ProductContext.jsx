@@ -13,6 +13,7 @@ export const ProductContextProvider = ({ children }) => {
   const [cartShow, setCartShow] = useState(false);
   const [price, setPrice] = useState(0);
   const [user, setUser] = useState("");
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const auth = getAuth();
@@ -30,7 +31,10 @@ export const ProductContextProvider = ({ children }) => {
     }
     axios
       .get(`https://api.escuelajs.co/api/v1/products/?categoryId=${category}`)
-      .then((res) => setData(res.data))
+      .then((res) => {
+        setData(res.data);
+        setItems(res.data);
+      })
       .catch((err) => console.log(err));
   }, [category]);
 
@@ -51,6 +55,8 @@ export const ProductContextProvider = ({ children }) => {
         setPrice,
         setUser,
         user,
+        items,
+        setItems,
       }}
     >
       {children}

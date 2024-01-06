@@ -10,17 +10,20 @@ function ProductCard(props) {
     useContext(ProductContext);
   const [check, setCheck] = useState(false);
 
+  // Checking if the item is added to the cart, if added check icon to be displayed
   useEffect(() => {
     const status = cart.some((elem) => elem.id == id);
     if (status) setCheck(true);
     else setCheck(false);
   }, [cart]);
 
+  // Showing the detail of the product and modal to be shown in screen
   const handleClick = () => {
     setSingleProduct(props);
     setShow(true);
   };
 
+  // Adding the item to the cart and cart modal to be shown on the screen
   const addToCart = (e) => {
     e.stopPropagation();
 

@@ -12,12 +12,14 @@ function Navbar() {
   const [selected, setSelected] = useState("");
   const navigate = useNavigate();
 
+  // Filtering the products based on the category
   const handleClick = (e) => {
     setCategory(e.target.dataset.id);
     setSelected(e.target.dataset.name);
     navigate("/");
   };
 
+  // Firebase google OAuth login
   const handleLogin = () => {
     const auth = getAuth();
     signInWithPopup(auth, provider)

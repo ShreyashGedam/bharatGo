@@ -10,6 +10,7 @@ function Cartbox() {
     useContext(ProductContext);
   const navigate = useNavigate();
 
+  // Changing the quantity of items in the cart
   const handleQuantity = (id, val) => {
     setCart((prev) => {
       return prev.map((elem) =>
@@ -20,10 +21,12 @@ function Cartbox() {
     });
   };
 
+  // Removing the item from the cart
   const handleRemove = (id) => {
     setCart((prev) => prev.filter((elem) => elem.id != id));
   };
 
+  // Adding the total amount of the products in the cart
   function handlePrice() {
     const sum = cart.reduce((acc, elem) => elem.quantity * elem.price + acc, 0);
     setPrice(sum);
