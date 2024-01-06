@@ -1,7 +1,6 @@
 import axios from "axios";
 import { getAuth } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-const name = import.meta.env.VITE_NAME
 
 export const ProductContext = createContext();
 
@@ -14,8 +13,6 @@ export const ProductContextProvider = ({ children }) => {
   const [cartShow, setCartShow] = useState(false);
   const [price, setPrice] = useState(0);
   const [user, setUser] = useState("");
-
-  console.log(name);
 
   useEffect(() => {
     const auth = getAuth();
