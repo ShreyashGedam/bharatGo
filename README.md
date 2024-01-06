@@ -1,4 +1,4 @@
-1 - Enter in the teminal - git clone https://github.com/ShreyashGedam/bharatGo.git
+1 - Enter in the teminal - "git clone https://github.com/ShreyashGedam/bharatGo.git" \n
 2 - Then enter "npm i" to install the dependencies.
 3 - Enter "npm run dev"  to start on localhost.
 
