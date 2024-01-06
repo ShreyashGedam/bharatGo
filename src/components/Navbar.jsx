@@ -31,9 +31,7 @@ function Navbar() {
     <div className="navbar-container">
       <div className="left-nav">
         <h3 data-id="" data-name="" onClick={(e) => handleClick(e)}>
-          <Link to={"/"} className="nav-link">
-            Shopi
-          </Link>
+          Shopi
         </h3>
         <p
           data-id=""
@@ -44,7 +42,7 @@ function Navbar() {
           All
         </p>
         <p
-          data-id="0"
+          data-id="1"
           onClick={(e) => handleClick(e)}
           data-name="clothes"
           className={selected == "clothes" ? "selected-tab" : null}
@@ -60,7 +58,7 @@ function Navbar() {
           Electronics
         </p>
         <p
-          data-id="16"
+          data-id="3"
           onClick={(e) => handleClick(e)}
           data-name="furnitures"
           className={selected == "furnitures" ? "selected-tab" : null}
@@ -68,7 +66,7 @@ function Navbar() {
           Furnitures
         </p>
         <p
-          data-id="0"
+          data-id="5"
           onClick={(e) => handleClick(e)}
           data-name="toys"
           className={selected == "toys" ? "selected-tab" : null}
