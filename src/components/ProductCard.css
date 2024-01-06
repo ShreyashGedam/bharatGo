@@ -1,0 +1,43 @@
+.products {
+    width: 224px;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.products img {
+    border-radius: 10px;
+    width: 100%;
+    height: 192px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.category {
+    position: absolute;
+    bottom: 62px;
+    left: 5px;
+    font-size: 13px;
+    background-color: #E0DEDD;
+    padding: 2px 8px;
+    border-radius: 20px; 
+}
+
+.addButton {
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+

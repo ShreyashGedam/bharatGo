@@ -1,0 +1,45 @@
+.navbar-container {
+    border-bottom: 2px solid lightgray;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-container>div {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav>h3 {
+    cursor: pointer;
+}
+
+.navbar-container p {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.selected-tab {
+    border-bottom: 1px solid;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+@media (max-width: 639px) {
+    .right-nav {
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .right-nav {
+        display: none !important;
+    }
+}
