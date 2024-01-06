@@ -14,7 +14,9 @@ export const ProductContextProvider = ({ children }) => {
   const [price, setPrice] = useState(0);
   const [user, setUser] = useState("");
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false);
 
+  //To check wether if the user has already logged in
   useEffect(() => {
     const auth = getAuth();
     auth.onAuthStateChanged(async (user) => {
@@ -24,16 +26,16 @@ export const ProductContextProvider = ({ children }) => {
     });
   }, [user]);
 
+  //Fetching all products or products based on category
   useEffect(() => {
-    if (category == "0") {
-      setData([]);
-      return;
-    }
+    setLoading(true);
+
     axios
       .get(`https://api.escuelajs.co/api/v1/products/?categoryId=${category}`)
       .then((res) => {
         setData(res.data);
         setItems(res.data);
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   }, [category]);
@@ -57,6 +59,7 @@ export const ProductContextProvider = ({ children }) => {
         user,
         items,
         setItems,
+        loading,
       }}
     >
       {children}

@@ -7,7 +7,8 @@ import Cartbox from "../components/Cartbox";
 import noResult from "../assets/noresults.svg";
 
 function Home() {
-  const { show, data, cartShow, items, setItems } = useContext(ProductContext);
+  const { show, data, cartShow, items, setItems, loading } =
+    useContext(ProductContext);
   const [search, setSearch] = useState("");
 
   // Filtering the data based on the input
@@ -28,17 +29,23 @@ function Home() {
         placeholder="Seacrh a product"
         onChange={(e) => setSearch(e.target.value)}
       />
-      {items.length > 0 ? (
-        <div className="products-container">
-          {items.map((elem) => (
-            <ProductCard key={elem.id} {...elem} />
-          ))}
-        </div>
+      {loading ? (
+        <h1>...Loading</h1>
       ) : (
-        <div className="noResults">
-          <img src={noResult} />
-          <p>Nothing Ralated</p>
-        </div>
+        <>
+          {items.length > 0 ? (
+            <div className="products-container">
+              {items.map((elem) => (
+                <ProductCard key={elem.id} {...elem} />
+              ))}
+            </div>
+          ) : (
+            <div className="noResults">
+              <img src={noResult} />
+              <p>Nothing Ralated</p>
+            </div>
+          )}
+        </>
       )}
       {show && (
         <div className="product-detail-card">
