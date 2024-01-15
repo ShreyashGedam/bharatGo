@@ -23,7 +23,8 @@ function Home() {
 
   return (
     <div className="container">
-      <input className="color-bar" type="color"  />
+      {/* <input className="color-bar" type="color"  /> */}
+      <input type="color" className="form-control" />
       <p>Home</p>
       <input
         type="text"
