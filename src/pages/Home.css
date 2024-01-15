@@ -16,6 +16,7 @@ h3 {
 
 .container>input {
     /* padding: 16px; */
+    appearance: none;
     width: 320px;
     border-radius: 8px;
     margin: 15px;
