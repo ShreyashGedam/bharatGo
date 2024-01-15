@@ -4,12 +4,15 @@
     padding: 0 20px 0 20px;
     display: flex;
     justify-content: space-between;
+
 }
 
 .navbar-container>div {
     display: flex;
     align-items: center;
 }
+
+
 
 .left-nav>h3 {
     cursor: pointer;
