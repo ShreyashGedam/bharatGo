@@ -2,11 +2,13 @@ import { useContext } from "react";
 import "./CheckOut.css";
 import { ProductContext } from "../Context/ProductContext";
 import emptyBox from "../assets/emptybox.svg";
+import AddToHomeScreen from "../components/AddToHome";
 
 function CheckOut() {
   const { cart } = useContext(ProductContext);
   return (
     <div className="checkout-container">
+      <AddToHomeScreen />
       <div className="checkout-main">
         <div className="checkout-heading">
           <h3>MyOrders</h3>
